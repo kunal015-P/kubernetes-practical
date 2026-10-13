@@ -6,7 +6,6 @@ sudo systemctl enable docker --now
 sudo usermod -aG docker $USER && newgrp docker
 
 #install kubectl
-#!/bin/bash
 
 ARCH=$(uname -m)
 [ "$ARCH" = "x86_64" ] && ARCH=amd64
@@ -21,7 +20,6 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 rm -f kubectl
 
 #install kind
-#!/bin/bash
 
 ARCH=$(uname -m)
 [ "$ARCH" = "x86_64" ] && ARCH=amd64
