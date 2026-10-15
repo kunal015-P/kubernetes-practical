@@ -1,0 +1,10 @@
+kind: DevOpsBatch
+apiVersion: trainwithkunal.com/v1
+metadata:
+  name: first-batch
+
+spec:
+  name: Devops-Toofan
+  duration: 6 month from 1st Dec 2026
+  platform: trainwithkunal.com
+  mode: live and recorded

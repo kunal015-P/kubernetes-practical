@@ -1,0 +1,39 @@
+kind: CustomResourceDefinition
+apiVersion: apiextensions.k8s.io/v1
+metadata:
+  name: devopsbatches.trainwithkunal.com
+
+spec:
+  group: trainwithkunal.com
+  names:
+    plural: devopsbatches
+    singular: devopsbatch
+    kind: DevOpsBatch
+    shortNames:
+      - git
+      - docker
+      - linux
+  scope: Namespaced
+  versions:
+  - name: v1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "This is the name of the DevOps Batch"
+              duration:
+                type: string
+                description: "This is the duration of devops batch"
+              platform:
+                type: string
+                description: "This is the mode of the batch e. Live & Offline"
+              mode:
+                type: string
+                description: "This is the platform of the batch"
