@@ -5,6 +5,11 @@ metadata:
   namespace: nginx
 
 spec:
+  tolerations:
+  - key: "prod"
+    operator: "Equal"
+    value: "true"
+    effect: "NoSchedule"
   containers:
   - name: nginx
     image: nginx:latest
